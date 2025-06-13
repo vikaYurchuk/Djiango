@@ -1,0 +1,15 @@
+{% extends "_layout.html" %}
+
+{% block content %}
+<h2>Car Catalog</h2>
+{% if products %}
+<ul>
+    {% for car in products %}
+    <li>{{ car.brand }} {{ car.model }} - {{ car.price }}$</li>
+    {% endfor %}
+</ul>
+<p>Total: {{ count }}</p>
+{% else %}
+<p>No cars available.</p>
+{% endif %}
+{% endblock %}

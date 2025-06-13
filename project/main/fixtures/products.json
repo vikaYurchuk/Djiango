@@ -1,0 +1,122 @@
+[
+    {
+        "model": "main.Product",
+        "pk": 1,
+        "fields": {
+            "brand": "Toyota",
+            "model": "Corolla",
+            "price": "18500.00",
+            "year": 2020,
+            "fuel_consumption": 6.4,
+            "color": "White"
+        }
+    },
+    {
+        "model": "main.Product",
+        "pk": 2,
+        "fields": {
+            "brand": "Honda",
+            "model": "Civic",
+            "price": "19900.00",
+            "year": 2021,
+            "fuel_consumption": 6.2,
+            "color": "Black"
+        }
+    },
+    {
+        "model": "main.Product",
+        "pk": 3,
+        "fields": {
+            "brand": "Ford",
+            "model": "Focus",
+            "price": "17400.00",
+            "year": 2019,
+            "fuel_consumption": 6.7,
+            "color": "Blue"
+        }
+    },
+    {
+        "model": "main.Product",
+        "pk": 4,
+        "fields": {
+            "brand": "Mazda",
+            "model": "3",
+            "price": "18800.00",
+            "year": 2020,
+            "fuel_consumption": 6.3,
+            "color": "Red"
+        }
+    },
+    {
+        "model": "main.Product",
+        "pk": 5,
+        "fields": {
+            "brand": "Hyundai",
+            "model": "Elantra",
+            "price": "17990.00",
+            "year": 2021,
+            "fuel_consumption": 6.5,
+            "color": "Silver"
+        }
+    },
+    {
+        "model": "main.Product",
+        "pk": 6,
+        "fields": {
+            "brand": "BMW",
+            "model": "320i",
+            "price": "28900.00",
+            "year": 2022,
+            "fuel_consumption": 7.1,
+            "color": "Grey"
+        }
+    },
+    {
+        "model": "main.Product",
+        "pk": 7,
+        "fields": {
+            "brand": "Audi",
+            "model": "A4",
+            "price": "32500.00",
+            "year": 2022,
+            "fuel_consumption": 7.0,
+            "color": "White"
+        }
+    },
+    {
+        "model": "main.Product",
+        "pk": 8,
+        "fields": {
+            "brand": "Mercedes-Benz",
+            "model": "C200",
+            "price": "34500.00",
+            "year": 2023,
+            "fuel_consumption": 6.9,
+            "color": "Black"
+        }
+    },
+    {
+        "model": "main.Product",
+        "pk": 9,
+        "fields": {
+            "brand": "Volkswagen",
+            "model": "Golf",
+            "price": "21000.00",
+            "year": 2020,
+            "fuel_consumption": 6.6,
+            "color": "Green"
+        }
+    },
+    {
+        "model": "main.Product",
+        "pk": 10,
+        "fields": {
+            "brand": "Kia",
+            "model": "Cerato",
+            "price": "19500.00",
+            "year": 2021,
+            "fuel_consumption": 6.4,
+            "color": "Blue"
+        }
+    }
+]
