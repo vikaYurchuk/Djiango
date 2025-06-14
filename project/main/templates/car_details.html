@@ -1,0 +1,28 @@
+{% extends "_layout.html" %}
+
+{% block content %}
+
+  <div class="card text-center">
+    <div class="card-header">
+      Car details
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Special info </h5>
+      <li>
+        {% if item.image %}
+        <img height="60" src="{{item.image.url}}" alt="{{i.brand}}">
+        {% else %}
+        <img height="60"
+            src="https://png.pngtree.com/png-vector/20221125/ourmid/pngtree-no-image-available-icon-flatvector-illustration-picture-coming-creative-vector-png-image_40968940.jpg"
+            alt="{{i.brand}}">
+        {% endif %}
+      </li>
+      <li class="list-group-item">Brand: {{item.brand}}</li>
+      <li class="list-group-item">Model: {{item.model}}</li>
+      <li class="list-group-item">Year: {{item.year}}</li>
+      <li class="list-group-item">Color: {{item.color}}</li>
+      <li class="list-group-item">Price: {{item.price}}</li>
+    </div>
+  </div>
+  <a href="/catalog" class="btn btn-primary">Back</a>
+  {% endblock %}

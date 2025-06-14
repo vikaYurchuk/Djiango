@@ -5,6 +5,7 @@ from django.db import models
 class Product(models.Model):
     brand = models.CharField(max_length=100)
     model = models.CharField(max_length=100)
+    image = models.ImageField(blank=True, null=True, upload_to="main/")
     price = models.DecimalField(max_digits=10, decimal_places=2)
     year = models.PositiveIntegerField( blank=True, null=True)
     fuel_consumption = models.DecimalField(
