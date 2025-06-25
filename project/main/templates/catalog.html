@@ -3,6 +3,7 @@
 {% block content %}
 
 <h2>Car Catalog</h2>
+<a href="/create" class="btn btn-primary my-2">Create New Product</a>
 {% if products %}
 <table class="table table-striped">
     <thead >
@@ -21,7 +22,7 @@
         <tr class="align-middle">
             <th scope="row">{{i.id}}</th>
             <td>
-                {% if item.image %}
+                {% if i.image %}
                 <img height="60" src="{{i.image.url}}" alt="{{i.brand}}">
                 {% else %}
                 <img height="60"
@@ -35,12 +36,14 @@
             <td>{{i.year}}</td>
             <td>
                 <a href="/details/{{i.id}}" class="btn btn-info">Info</button>
+                <a href="/edit/{{i.id}}" class="btn btn-warning">Edit</a>
                 <a href="/delete/{{i.id}}" class="btn btn-danger">Delete</button>
             </td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
+<p class="text-center">Count: {{ count }}</p>
 {% else %}
 <p>No products available.</p>
 {% endif %}

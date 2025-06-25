@@ -1,0 +1,54 @@
+
+
+{% extends "_layout.html" %}
+
+{% block content %}
+
+<h2>Create new car</h2>
+<form class="row g-3" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="col-md-6">
+        <label class="form-label">Brand</label>
+       <input value="{{ form.brand.value }}" type="text" name="brand" class="form-control"
+            placeholder="Enter car brand">
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Model</label>
+        <input value="{{ form.model.value }}" type="text" name="model" class="form-control"
+            placeholder="Enter car model">
+    <div class="col-md-3">
+        <label class="form-label">Price</label>
+        <input value="{{ form.price.value }}" type="number" name="price" class="form-control"
+            placeholder="Enter car price">
+    </div>
+    <div class="col-3">
+        <label class="form-label">Year</label>
+        <input value="{{ form.year.value }}" type="number" name="year" class="form-control"
+            placeholder="Enter car year">
+    </div>
+    <div class="col-3">
+        <label class="form-label">Fuel consumption</label>
+        <input value="{{ form.fuel_consumption.value }}" type="number" name="fuel_consumption" class="form-control"
+            placeholder="Enter fuel consumption">
+    </div>
+    <div class="col-12">
+        <input value="{{ form.color.value }}" type="text" name="color" class="form-control"
+            placeholder="Enter car color">
+    </div>
+
+    <div class="col-md-12">
+        <label for="inputCity" class="form-label">Image</label>
+        <input type="file" name="image" class="form-control">
+    </div>
+
+    <div class="col-6">
+       <a href="/catalog" class="btn btn-dark w-100">Back</a>
+    </div>
+    <div class="col-6">
+        <button type="submit" class="btn btn-success w-100">Edit</button>
+    </div>
+</form>
+{% endblock %}
+
+
