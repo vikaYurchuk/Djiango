@@ -1,6 +1,8 @@
 
 import os
 from pathlib import Path
+from pickle import TRUE
+import dotenv 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -119,3 +121,11 @@ MEDIA_LOCATION = "media"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# The secret key
+SECRET_KEY = 'django-insecure-z*f%(^ghg@g5e)r6gxomcolkf674jooezpl$ag-g*rt4lb(as9'  # os.environ.get("SECRET_KEY")
+
+DEBUG = TRUE # bool(os.environ.get("DEBUG", default=1))
+
+ALLOWED_HOSTS = ["*"]

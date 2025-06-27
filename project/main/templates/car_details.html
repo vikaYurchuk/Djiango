@@ -8,15 +8,15 @@
     </div>
     <div class="card-body">
       <h5 class="card-title">Special info </h5>
-      <li>
+      <div>
         {% if item.image %}
-        <img height="60" src="{{item.image.url}}" alt="{{i.brand}}">
+        <img height="300" src="{{item.image.url}}" alt="{{i.brand}}">
         {% else %}
-        <img height="60"
+        <img height="300"
             src="https://png.pngtree.com/png-vector/20221125/ourmid/pngtree-no-image-available-icon-flatvector-illustration-picture-coming-creative-vector-png-image_40968940.jpg"
             alt="{{i.brand}}">
         {% endif %}
-      </li>
+      </div>
       <li class="list-group-item">Brand: {{item.brand}}</li>
       <li class="list-group-item">Model: {{item.model}}</li>
       <li class="list-group-item">Year: {{item.year}}</li>
