@@ -1,0 +1,46 @@
+{% extends "_layout.html" %}
+
+{% block content %}
+<h2 class="mb-4">Rent car</h2>
+
+<form class="row g-3" method="post">
+  {% csrf_token %}
+
+  <div class="col-12">
+    <label for="car" class="form-label">Order car</label>
+    <select id="car" name="car_id" class="form-select" required>
+      <option selected disabled>Order car...</option>
+      {% for i in products %}
+      <option value="{{ i.id }}">{{ i.brand }} {{ i.model }}</option>
+
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="col-md-6">
+    <label for="start_date" class="form-label">Start date</label>
+    <input type="date" class="form-control" id="start_date" name="start_date" required>
+  </div>
+  <div class="col-md-6">
+    <label for="end_date" class="form-label">End date</label>
+    <input type="date" class="form-control" id="end_date" name="end_date" required>
+  </div>
+
+  <div class="col-md-6">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" name="name" required>
+  </div>
+  <div class="col-md-6">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" required>
+  </div>
+  <div class="col-12">
+    <label for="phone" class="form-label">Phone</label>
+    <input type="text" class="form-control" id="phone" name="phone" required>
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Rent</button>
+  </div>
+</form>
+{% endblock %}

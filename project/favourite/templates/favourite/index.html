@@ -1,0 +1,24 @@
+{% extends "_layout.html" %}
+
+{% block content %}
+<h1>User Favourite List</h1>
+
+<ul class="list-group">
+    {% for i in products %}
+    <li class="list-group-item">{{i.brand}} - {{i.model}} - {{i.price}}$</li>
+    {% endfor %}
+</ul>
+{% if products|length == 0 %}
+<p>Your favourite list is empty!</p>
+<div>
+    <a href="/catalog" class="btn btn-primary mt-3">Continue Booking</a>
+</div>
+{% else %}
+<div>
+    <a href="/orders/confirm/" class="btn btn-success mt-3">Confirm</a>
+</div>
+<div>
+    <a href="clear/" class="btn btn-secondary mt-3">Clear</a>
+</div>
+{% endif %}
+{% endblock %}

@@ -12,6 +12,8 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('catalog/', views.catalog, name='catalog'),
     path('', include('main.urls')),
+    path("favourite/", include("favourite.urls")),
+    
 ]
 
 if settings.DEBUG:  # Only serve media files in developmentAdd commentMore actions

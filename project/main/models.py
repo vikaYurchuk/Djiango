@@ -16,5 +16,18 @@ class Product(models.Model):
     def __str__(self):
         return self.model
 
+
+
+class Rental(models.Model):
+    car = models.ForeignKey(Product, on_delete=models.CASCADE)
+    start_date = models.DateField()
+    end_date = models.DateField()
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20)
+
+    def __str__(self):
+        return f"{self.name} - {self.car} ({self.start_date} to {self.end_date})"
+    
     class Meta:
-        ordering = ["model"]
+        ordering = ["car"]
