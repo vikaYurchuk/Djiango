@@ -5,7 +5,11 @@
 
 <ul class="list-group">
     {% for i in products %}
-    <li class="list-group-item">{{i.brand}} - {{i.model}} - {{i.price}}$</li>
+    <li class="list-group-item">{{i.brand}} - {{i.model}} - {{i.price}}$
+        <a href="/favourite/remove/{{i.id}}">Remove</a>
+        
+    </li>
+    
     {% endfor %}
 </ul>
 {% if products|length == 0 %}

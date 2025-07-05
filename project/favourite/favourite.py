@@ -24,5 +24,11 @@ def clear_favourite(session):
 def get_count(session):
     return len(get_favourite(session).keys())
 
+def remove_from_favourite(session, id):
+    favourite = session.get(FAVOURITE_KEY, {})
+    id = str(id)
+    if id in favourite:
+        del favourite[id]
+        session[FAVOURITE_KEY] = favourite
 
 # TODO: implement remove item from cart by id

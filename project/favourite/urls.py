@@ -7,4 +7,5 @@ urlpatterns = [
     path("clear/", views.clear),
     path("add/<int:id>", views.add),
     path("add/<int:id>/<int:quantity>", views.add),
+    path("remove/<int:id>", views.remove),
 ]
