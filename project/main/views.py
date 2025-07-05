@@ -9,11 +9,14 @@ from .models import Product
 from .forms.create import CreateProduct
 from .forms.edit import EditProduct
 from django.core.paginator import Paginator
-
+from django.shortcuts import redirect
 
 
 def index(request):
-    return render(request, "index.html")
+    products = Product.objects.all().order_by("id")
+    return render(request, "index.html", {"products": products})
+
+
 
 def catalog(request):
     products = Product.objects.all().order_by("id")
@@ -91,5 +94,3 @@ def details(request, id):
     return render(request, 'car_details.html', {'item': itemToDetail})
 
 
-
-    
