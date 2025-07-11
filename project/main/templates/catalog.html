@@ -31,7 +31,11 @@
                 {% endif %}
             </td>
             <td>{{i.brand}}</td>
-            <td>{{i.model}}</td>
+            <td>
+                <a href="/details/{{i.id}}" class="btn">
+                    {{i.model}}
+                </a>
+            </td>
             <td>{{i.price}}$</td>
             <td>{{i.year}}</td>
             <td>
@@ -39,6 +43,9 @@
                 <a href="/edit/{{i.id}}" class="btn btn-warning">Edit</a>
                 <a href="/delete/{{i.id}}" class="btn btn-danger">Delete</button>
                 <!-- <a href="/favourite/add/{{i.id}}" class="btn btn-dark">Add to Favourite</a> -->
+                 <a href="/delete/{{i.id}}" class="btn btn-danger">
+                    <i class="bi bi-trash-fill"></i>
+                </a>
             </td>
         </tr>
         {% endfor %}

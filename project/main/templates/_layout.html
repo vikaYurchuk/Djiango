@@ -21,13 +21,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="/">Home</a>
+        {% comment %} <a class="nav-link active" aria-current="page" href="/">Home</a> {% endcomment %}
 
-        <a class="nav-link" href="/catalog">Catalog</a>
+        <a class="nav-link" href="/catalog">Admin</a>
         <a class="nav-link" href="/rent">Rent</a>
         <a class="nav-link" href="/favourite">Favourite</a>
       
       </div>
+      <div>
+                    <a class="nav-link text-primary" href="/favourite">
+                        <i class="bi bi-basket"></i>
+                        {% if favourite_count > 0 %}({{ favourite_count }}){% endif %}
+                    </a>
+                </div>
     </div>
   </div>
 </nav>

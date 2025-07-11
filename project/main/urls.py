@@ -12,4 +12,5 @@ urlpatterns = [
     path("create", views.create),
     path("details/<int:id>", views.details),
     
+    
 ]

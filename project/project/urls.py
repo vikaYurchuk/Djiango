@@ -13,6 +13,7 @@ urlpatterns = [
     path('catalog/', views.catalog, name='catalog'),
     path('', include('main.urls')),
     path("favourite/", include("favourite.urls")),
+    path("orders/", include("orders.urls")),
     
 ]
 
