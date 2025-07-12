@@ -6,12 +6,13 @@ from favourite.favourite import add_to_favourite, clear_favourite, get_favourite
 from orders.models import Order
 from main.models import Product
 from users.models import User
-
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
+@login_required
 
 def index(request):
-    orders = Order.objects.all()
+    orders = Order.objects.filter(client=request.user)
 
     # TODO: show only my
     # orders = Order.objects.filter(client=request.user)
@@ -30,7 +31,7 @@ def confirm(request):
     products = Product.objects.filter(id__in=items.keys())
 
     Order.objects.create(
-        total_price=sum(p.price for p in products),
+        total_price=sum(p.price for p in products), client=User.objects.last()
         # client=User.objects.last()
     )
 

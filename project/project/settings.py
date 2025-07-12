@@ -19,7 +19,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = "users.User"
 
+LOGIN_URL = "/login/"
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
 # Application definition
 
 INSTALLED_APPS = [
@@ -32,7 +36,8 @@ INSTALLED_APPS = [
     'main',
     'favourite',
     "orders",
-    "users",
+    "users"
+    
     
 ]
 
@@ -135,3 +140,4 @@ SECRET_KEY = 'django-insecure-z*f%(^ghg@g5e)r6gxomcolkf674jooezpl$ag-g*rt4lb(as9
 DEBUG = TRUE # bool(os.environ.get("DEBUG", default=1))
 
 ALLOWED_HOSTS = ["*"]
+
