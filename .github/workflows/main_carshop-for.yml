@@ -20,13 +20,14 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Create and activate virtual environment, install dependencies
-        working-directory: ${{ github.workspace }}
+      - name: Create virtual environment and install dependencies
         run: |
+          cd $GITHUB_WORKSPACE
           python -m venv venv
-          source venv/bin/activate
-          pip install --upgrade pip
+          source venv/bin/activate && \
+          pip install --upgrade pip && \
           pip install -r requirements.txt
+
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
